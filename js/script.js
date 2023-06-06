@@ -23,7 +23,7 @@ floatDiv.onclick = function () {
 .
 */
 
-// scroll to top when click on up div 
+// scroll to top when click on up div
 var scrollToTop = document.querySelector(".up");
 scrollToTop.onclick = function () {
   window.scrollTo({
@@ -73,8 +73,7 @@ window.onscroll = function () {
       spans.forEach((span) => startCount(span));
     }
     started = true;
-  }else{
-    
+  } else {
     head.style.display = "flex";
     scrollToTop.classList.remove("show");
   }
@@ -132,3 +131,22 @@ function typewriter() {
 }
 
 setTimeout("typewriter()", 10500);
+/*
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+*/
+

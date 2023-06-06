@@ -11,6 +11,16 @@
   --red: hsl(0, 100%, 50%);
   --scrollbar-thumb-bg: hsl(222, 81%, 25%);
   --Very-light-gray: hsl(0, 0%, 94%);
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
   --main-font-family: "Changa", sans-serif;
   --header-font-size: clamp(2.375rem, 0.8125rem + 5vw, 3.625rem);
   --mini-txt-font-size: clamp(0.625rem, 0.5584rem + 0.355vw, 1rem);
@@ -96,6 +106,7 @@ header {
   width: 100%;
   height: 100px;
   margin-top: 45px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 @media (width <= 768px) {
   header {
@@ -246,13 +257,24 @@ nav .list ul li a i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 25px;
+  row-gap: 20px;
   padding: 20px;
   height: 50%;
   width: 100%;
   list-style: none;
   font-size: 18px;
 }
+.menu ul li:hover:not(.x-mark){
+  opacity: 0.8;
+}
+.menu ul li.inner{
+  margin-right: 50px;
+}
+.menu ul li.inner a {
+  font-size: var(--txt-font-size);
+  color: var(--white);
+}
+
 .menu ul li:not(.x-mark) {
   display: flex;
   width: 100%;
@@ -283,6 +305,7 @@ nav .list ul li a i {
 .menu .logo {
   width: 180px;
   height: 120px;
+  margin-top: 28px;
 }
 .menu .logo img {
   max-width: 100%;
@@ -366,7 +389,6 @@ nav .list ul li a i {
   font-weight: 900;
   font-family: var(--intro-header-font-family);
 }
-
 /* Animation */
 .anim-typewriter {
   animation: typewriter 4s steps(19) 7s 1 normal both,
@@ -471,6 +493,109 @@ section.video .vid {
 }
 /* video section :end  */
 
+/* section features :start  */
+section.features  h1 {
+  font-size: var(--header-font-size);
+  color: var(--dark-blue);
+  text-align: center;
+}
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px;
+}
+
+.box .img img {
+  max-width: 100%;
+}
+.box .img {
+  width: 45px;
+  height: 45px;
+}
+
+@media (max-width: 450px) {
+  .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+}
+
+.cyan {
+  border-top: 3px solid var(--cyan);
+}
+.red {
+  border-top: 3px solid var(--red);
+}
+.blue {
+  border-top: 3px solid var(--blue);
+}
+.orange {
+  border-top: 3px solid var(--orange);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  row-gap: 10px;
+}
+.red a {
+  background-color: var(--red);
+}
+.blue a {
+  background-color: var(--blue);
+}
+.orange a {
+  background-color: var(--orange);
+}
+.cyan a {
+  background-color: var(--cyan);
+}
+.box a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: var(--mini-txt-font-size);
+}
+@media (min-width: 950px) {
+  .row1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-down {
+    position: relative;
+    top: 150px;
+  }
+  .box {
+    width: 25%;
+  }
+  .header p {
+    width: 30%;
+  }
+}
+/* section features :end  */
+
 /* section num-3 :start  */
 section.other-services {
   width: 100%;
@@ -528,11 +653,7 @@ section.other-services .container ul {
     row-gap: 15px;
   }
 }
-section.other-services h1 {
-  font-size: var(--header-font-size);
-  color: var(--dark-blue);
-  margin-bottom: 15px;
-}
+
 /* section num-3 :end */
 
 /* news bar  */
@@ -660,6 +781,29 @@ section.other-services h1 {
 }
 /* section num-4 :end */
 
+.more-services{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-services a:hover{
+  background-color: var(--orange);
+  color: var(--white);
+  border:none;
+}
+.more-services a{
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: var(--txt-font-size);
+  font-weight: 500;
+  text-align: center;
+}
 /* section num-5 :start */
 .s5 {
   display: grid;
@@ -951,7 +1095,7 @@ section.other-services h1 {
 
 .contact-us .one a {
   font-size: 30px;
-  color: #551a8b;
+  color: var(--orange);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -961,6 +1105,7 @@ section.other-services h1 {
     font-size: 25px;
   }
 }
+
 .contact-us .one a i {
   color: var(--white);
 }

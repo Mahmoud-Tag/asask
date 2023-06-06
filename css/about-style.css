@@ -227,13 +227,24 @@ nav .list ul li a i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 25px;
+  row-gap: 20px;
   padding: 20px;
   height: 50%;
   width: 100%;
   list-style: none;
   font-size: 18px;
 }
+.menu ul li:hover:not(.x-mark){
+  opacity: 0.8;
+}
+.menu ul li.inner{
+  margin-right: 50px;
+}
+.menu ul li.inner a {
+  font-size: var(--txt-font-size);
+  color: var(--white);
+}
+
 .menu ul li:not(.x-mark) {
   display: flex;
   width: 100%;
@@ -264,6 +275,7 @@ nav .list ul li a i {
 .menu .logo {
   width: 180px;
   height: 120px;
+  margin-top: 28px;
 }
 .menu .logo img {
   max-width: 100%;
@@ -507,7 +519,100 @@ section.video .vid {
   }
 }
 /* video section :end */
+.ma-container{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ma-container .more-about {
+  display: flex;
+  width: clamp(300px, 70%, 700px);
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s;
+}
+.ma-container .more-about::after {
+  position: absolute;
+  top: -6px;
+  left: -45px;
+  content: "20% خصم";
+  width: 120px;
+  height: 50px;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  transform: rotate(-45deg);
+  color: var(--white);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: var(--mini-txt-font-size);
+}
+.ma-container .more-about:hover {
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.ma-container .more-about a span {
+  margin-right: 10px;
+}
+.ma-container .more-about a {
+  font-size: var(--txt-font-size);
+  text-decoration: none;
+  color: var(--dark-blue);
+  background-color: var(--orange);
+  padding: 15px 30px;
+  width: 100%;
+  font-size: clamp(1.25rem, 1.1343rem + 0.6173vw, 1.875rem);
+  font-weight: 900;
+}
+@media (width <764px) {
+  
+  .ma-container .more-about a {
+    font-size: 14px;
+  }
+}
 
+.order {
+  width: 50%;
+  height: 70px;
+  text-align: center;
+  border-radius: 7px;
+  position: fixed;
+  bottom: -10px;
+  left: 25%;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 3px 25px 3px 0;
+  border: 1px solid var(--dark-blue);
+  z-index: 3;
+}
+.order img {
+  min-width: 27px;
+}
+.order a {
+  font-size: clamp(0.75rem, 0.5417rem + 1.1111vw, 1.875rem);
+  color: var(--white);
+  font-weight: 900;
+}
+.order span {
+  font-size: clamp(0.75rem, 0.5417rem + 1.1111vw, 1.875rem);
+  color: var(--white);
+  font-weight: 900;
+}
+@media (width < 764px) {
+  .order {
+    display: none;
+  }
+}
 /* footer :start  */
 footer {
   width: 100%;
